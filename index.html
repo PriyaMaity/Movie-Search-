@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Search App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="search-container">
+    <div class="logos">
+      <img src="movie-logo.webp" alt="" id="logo">
+      <span>Movies</span>
+    </div>
+    
+    <input id="search-input" type="search" placeholder="Search for movies..." />
+  </div>
+  <div id="results-container"></div>
+  <div id="movie-details-modal" class="hidden"></div>
+  
+  <div id="movie-modal" class="modal">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <h2 id="modal-title">Movie Title</h2>
+      <img id="modal-poster" src="" alt="Movie Poster">
+      <p id="modal-description">Description of the movie will appear here.</p>
+      <div id="movie-details">
+        <p><strong>Metascore:</strong> <span id="modal-metascore">N/A</span></p>
+        <p><strong>IMDb Rating:</strong> <span id="modal-imdbRating">N/A</span></p>
+        <p><strong>IMDb Votes:</strong> <span id="modal-imdbVotes">N/A</span></p>
+        <p><strong>IMDb ID:</strong> <span id="modal-imdbID">N/A</span></p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
