@@ -10,9 +10,11 @@ const placeholderImage = '/mnt/data/image.png';
 
 async function fetchMovies(userInput, page = 1) {
   const response = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${userInput}&page=${page}`);
+  console.log(response);
   const data = await response.json();
   if(data.Response === "True") {
     renderMovies(data.Search);
+    console.log(data);
   }else {
     resultContanier.innerHTML = "<p>No results found.</p>"
   }
