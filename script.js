@@ -9,7 +9,7 @@ const closeModal = document.querySelector('#close-modal');
 const placeholderImage = '/mnt/data/image.png';
 
 async function fetchMovies(userInput, page = 1) {
-  const response = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${userInput}&page=${page}`);
+  const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${userInput}&page=${page}`);
   console.log(response);
   const data = await response.json();
   if(data.Response === "True") {
@@ -34,7 +34,7 @@ function renderMovies(movies) {
 }
 
 async function fetchMovieDetails(imdbID) {
-const response = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&i=${imdbID}`);
+const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&i=${imdbID}`);
 const data = await response.json();
 if (data.Response === "True") {
   modalTitle.textContent = data.Title;
